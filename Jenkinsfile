@@ -7,13 +7,15 @@ pipeline {
         sleep 4
      }
    
+      
     }
      stage ('test'){
       steps {
         echo "test stage" 
-        sleel 5
+        sleep 5
      }
    
+       
     }
      stage ('deploy'){
       steps {
@@ -21,6 +23,9 @@ pipeline {
         sleep 10
      }
    
+       
     }
+    
  }
+  
 }
