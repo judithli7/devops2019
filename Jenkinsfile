@@ -33,4 +33,19 @@ pipeline {
     
  }
   
+} 
+post {
+  alway {
+      echo "alwaya display this mesage"
+  }
+  failure {
+    echo "job failed "
+  }
+  success {
+    echo "Successful run "
+  }
+  unstable {
+    echo "The job is unstable "
+   }
 }
+      
