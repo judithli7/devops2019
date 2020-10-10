@@ -1,5 +1,9 @@
 pipeline {
   agent any
+  triggers {
+      pollSCM 'H/1 * * * *'
+    
+  }
   tools {
       maven 'M2_HOME'
   }
@@ -29,23 +33,11 @@ pipeline {
      }
    
        
-    }
+    
+     }
     
  }
   
-} 
-post {
-  alway {
-      echo "alwaya display this mesage"
-  }
-  failure {
-    echo "job failed "
-  }
-  success {
-    echo "Successful run "
-  }
-  unstable {
-    echo "The job is unstable "
-   }
 }
-      
+
+     
